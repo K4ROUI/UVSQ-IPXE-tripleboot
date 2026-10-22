@@ -1,0 +1,34 @@
+#!ipxe
+
+:start
+set boot-url http://${dhcp-server}
+menu TER Diskless Triple-Boot
+item ubuntu  Boot Ubuntu Live
+item debian  Boot Debian Live
+item windows Boot Windows PE
+item shell   iPXE shell
+choose target || goto start
+goto ${target}
+
+:ubuntu
+set args initrd=initrd boot=casper ip=dhcp url=${boot-url}/casper/ubuntu.iso
+kernel ${boot-url}/casper/vmlinuz ${args}
+initrd ${boot-url}/casper/initrd
+boot
+
+:debian
+set args initrd=initrd.img boot=live fetch=${boot-url}/debian/debian-live.iso
+kernel ${boot-url}/debian/vmlinuz ${args}
+initrd ${boot-url}/debian/initrd.img
+boot
+
+:windows
+kernel ${boot-url}/windows/wimboot
+initrd ${boot-url}/windows/bcd bcd
+initrd ${boot-url}/windows/boot.sdi boot.sdi
+initrd ${boot-url}/windows/boot.wim boot.wim
+boot
+
+:shell
+shell
+goto start
