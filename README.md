@@ -47,11 +47,31 @@ Le menu utilise `${dhcp-server}` pour construire les URLs HTTP. Cela suppose que
 | Windows PE | Environnement utilisable |
 | Exécution d'applications | Réalisée dans les environnements |
 
-La solution a semblé **rapide et flexible** lors des manipulations, mais **aucun temps de démarrage chiffré** n'a été relevé dans ce dépôt. Les environnements utilisent la mémoire du client et des données hébergées sur le serveur, selon le média démarré. L'entrée « Windows » correspond à **Windows PE**, environnement de préinstallation/maintenance : elle ne démarre **pas une installation complète de Windows**.
+Les démarrages ont été décrits comme **rapides et stables, sans problème bloquant constaté pendant les essais**, mais **aucune durée de démarrage ni comparaison avec une moyenne de référence n'a été mesurée**. Les environnements utilisent la mémoire du client et des données hébergées sur le serveur, selon le média démarré. L'entrée « Windows » correspond à **Windows PE**, environnement de préinstallation/maintenance : elle ne démarre **pas une installation complète de Windows**.
 
 Le responsable de la formation IRS a évoqué une **possible utilisation future** dans les laboratoires. Ce n'est pas une installation institutionnelle déjà effectuée ou officiellement validée.
 
 [Scénarios de validation et limites](docs/validation.md)
+
+## Rôle personnel et répartition du travail
+
+Ce projet a été réalisé **en équipe** dans le cadre de la formation IRS. **Mon rôle personnel** portait principalement sur **la partie Windows/Windows PE et la gestion de la partie serveur** lors de la mise en place et des essais. Le déploiement et la validation sur les postes ont été réalisés dans le cadre du travail collectif.
+
+Cette précision distingue les tâches prises en charge personnellement des résultats obtenus par toute l'équipe.
+
+## Captures des essais
+
+Cinq captures authentiques provenant du travail universitaire ont été fournies pour documenter :
+
+- le menu « UVSQ Hybrid Boot Menu » (Lubuntu, Windows PE, Debian Live) ;
+- l'ouverture des bureaux Linux et de l'environnement Windows PE ;
+- les communications entre clients dans VirtualBox ;
+- un ping depuis Windows PE vers le serveur ;
+- un ping depuis Lubuntu vers le serveur.
+
+Les **copies des captures ne sont pas encore intégrées comme fichiers image dans ce dépôt**. Leur contenu et les précautions d'interprétation sont décrits dans [docs/observations-visuelles.md](docs/observations-visuelles.md).
+
+**Différence entre versions :** le menu photographié affiche **Lubuntu**, tandis que le fichier `menu.ipxe` actuellement publié utilise le libellé **Ubuntu Live**. La capture ne prouve donc pas qu'il s'agit de la version exacte de ce fichier. De même, une légende historique mentionne « Windows 11 », mais le terminal `X:\\Windows\\System32` visible sur la capture est cohérent avec l'utilisation de **Windows PE**.
 
 ## Contenu du dépôt
 
@@ -96,7 +116,7 @@ Les **7 tests** inspectent la cohérence des références dans `config.ini` et `
 - Le fonctionnement dépend des médias, du réseau et de la disponibilité du serveur.
 - Secure Boot peut nécessiter une chaîne adaptée et signée.
 - Les médias ne sont pas redistribués ici ; les licences restent applicables.
-- Les mesures de performance, les journaux d'essais et les captures de laboratoire ne sont pas encore publiés.
+- Les mesures de performance et les journaux d'essais ne sont pas publiés. Les captures ont été fournies par l'équipe mais leurs fichiers image restent à ajouter au dépôt.
 - Toute adoption future en laboratoire demanderait des validations de sécurité, de compatibilité et d'exploitation.
 
 Ce dépôt documente une **expérimentation universitaire**, pas une solution de production prête à déployer.
