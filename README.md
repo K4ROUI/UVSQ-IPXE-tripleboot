@@ -4,7 +4,7 @@
 
 Ce projet permet de **démarrer trois environnements via le réseau**, sur des ordinateurs ou des machines virtuelles sans disque dur local : **Ubuntu Live, Debian Live et Windows PE**. Les fichiers de démarrage sont servis par une infrastructure commune ; aucune installation d'OS sur le disque des clients n'est requise.
 
-> **Résultats des essais rapportés par l'équipe :** première validation sur **6 PC physiques**, puis extension à **plus de 20 postes** ; démarrage également réussi sur plusieurs VM sans disque dur virtuel. Les sessions étaient utilisables et permettaient d'exécuter des applications. Ces observations n'ont pas encore de captures ou de journaux publiés sur GitHub.
+> **Résultats des essais rapportés par l'équipe :** première validation sur **6 PC physiques**, puis extension à **plus de 20 postes** ; démarrage également réussi sur plusieurs VM sans disque dur virtuel. Les sessions étaient utilisables et permettaient d'exécuter des applications. Les captures des environnements et des essais réseau sont disponibles dans [la galerie du dépôt](#captures-des-essais) ; elles ne permettent cependant pas de vérifier indépendamment le nombre total de postes.
 
 ## Pourquoi ce projet ?
 
@@ -69,7 +69,19 @@ Cinq captures authentiques provenant du travail universitaire ont été fournies
 - un ping depuis Windows PE vers le serveur ;
 - un ping depuis Lubuntu vers le serveur.
 
-Les **copies des captures ne sont pas encore intégrées comme fichiers image dans ce dépôt**. Leur contenu et les précautions d'interprétation sont décrits dans [docs/observations-visuelles.md](docs/observations-visuelles.md).
+Les cinq captures du laboratoire sont maintenant publiées dans [docs/screenshots](docs/screenshots/). Elles illustrent le menu, les environnements utilisables et les tests de connectivité :
+
+| Menu réseau | Environnements démarrés |
+| --- | --- |
+| ![Menu UVSQ Hybrid Boot](docs/screenshots/01-menu-ipxe.webp) | ![Windows PE, Debian et Lubuntu](docs/screenshots/02-environnements-winpe-debian-lubuntu.webp) |
+
+| Communications entre clients | Test sous Windows PE | Test sous Lubuntu |
+| --- | --- | --- |
+| [Voir la capture des pings entre clients](docs/screenshots/03-tests-ping-entre-clients.webp) | [Voir le ping Windows PE](docs/screenshots/04-test-ping-windows-pe.webp) | [Voir le ping Lubuntu](docs/screenshots/05-test-ping-lubuntu-serveur.webp) |
+
+Les tests `ping` visibles affichent **0 % de perte sur les échanges présentés** ; cela ne prouve pas que tous les démarrages ont été simultanés ou qu'une performance chiffrée a été mesurée.
+
+[Observations détaillées et limites des captures](docs/observations-visuelles.md)
 
 **Différence entre versions :** le menu photographié affiche **Lubuntu**, tandis que le fichier `menu.ipxe` actuellement publié utilise le libellé **Ubuntu Live**. La capture ne prouve donc pas qu'il s'agit de la version exacte de ce fichier. De même, une légende historique mentionne « Windows 11 », mais le terminal `X:\\Windows\\System32` visible sur la capture est cohérent avec l'utilisation de **Windows PE**.
 
@@ -84,7 +96,11 @@ Les **copies des captures ne sont pas encore intégrées comme fichiers image da
 ├── docs/
 │   ├── architecture.md
 │   ├── installation.md
-│   └── validation.md
+│   ├── validation.md
+│   ├── observations-visuelles.md
+│   └── screenshots/
+│       ├── README.md
+│       └── 5 captures WebP
 └── tests/
     └── test_configuration.py
 ```
@@ -116,7 +132,7 @@ Les **7 tests** inspectent la cohérence des références dans `config.ini` et `
 - Le fonctionnement dépend des médias, du réseau et de la disponibilité du serveur.
 - Secure Boot peut nécessiter une chaîne adaptée et signée.
 - Les médias ne sont pas redistribués ici ; les licences restent applicables.
-- Les mesures de performance et les journaux d'essais ne sont pas publiés. Les captures ont été fournies par l'équipe mais leurs fichiers image restent à ajouter au dépôt.
+- Les mesures de performance et les journaux d'essais ne sont pas publiés. Cinq captures des environnements et de la connectivité sont disponibles dans `docs/screenshots/`.
 - Toute adoption future en laboratoire demanderait des validations de sécurité, de compatibilité et d'exploitation.
 
 Ce dépôt documente une **expérimentation universitaire**, pas une solution de production prête à déployer.

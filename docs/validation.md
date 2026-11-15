@@ -2,7 +2,7 @@
 
 ## Résultats de l'expérimentation universitaire
 
-Les résultats ci-dessous sont **rapportés par l'équipe ayant réalisé les essais**. Des captures authentiques du menu, des bureaux démarrés et de commandes réseau ont été transmises ; elles sont décrites dans [les observations visuelles](observations-visuelles.md), mais les fichiers image ne sont pas encore publiés dans ce dépôt. Elles corroborent certains états et échanges visibles, **sans vérifier indépendamment le total de plus de 20 postes**, ni fournir des mesures chronométrées.
+Les résultats ci-dessous sont **rapportés par l'équipe ayant réalisé les essais**. Des captures authentiques du menu, des bureaux démarrés et de commandes réseau ont été transmises ; elles sont publiées dans [la galerie](screenshots/) et décrites dans [les observations visuelles](observations-visuelles.md). Elles corroborent certains états et échanges visibles, **sans vérifier indépendamment le total de plus de 20 postes**, ni fournir des mesures chronométrées.
 
 | Essai | Résultat rapporté |
 | --- | --- |
