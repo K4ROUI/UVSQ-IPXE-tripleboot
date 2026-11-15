@@ -1,17 +1,12 @@
-# Captures du laboratoire iPXE
+# Captures authentiques du projet iPXE
 
-Ce dossier accueillera les captures authentiques issues du rapport universitaire et des essais communiqués par l'équipe.
+Ces images proviennent des essais universitaires transmis par l'équipe.
 
-Fichiers préparés pour import :
+- `01-menu-ipxe.webp` : menu UVSQ Hybrid Boot avec Lubuntu, Windows PE et Debian Live.
+- `02-environnements-winpe-debian-lubuntu.webp` : environnements démarrés. La légende de la capture historique parle de Windows 11, mais le terminal sur `X:\` correspond à l'environnement Windows PE.
+- `03-tests-ping-entre-clients.webp` : communications entre machines virtuelles sous VirtualBox.
+- `04-test-ping-windows-pe.webp` : configuration IP et ping depuis Windows PE.
+- `05-test-ping-lubuntu-serveur.webp` : adressage et ping depuis Lubuntu.
 
-| Fichier | Contenu |
-| --- | --- |
-| `01-menu-ipxe.webp` | Menu UVSQ : Lubuntu, Windows PE et Debian |
-| `02-environnements-winpe-debian-lubuntu.webp` | Bureaux et consoles des environnements démarrés |
-| `03-tests-ping-entre-clients.webp` | Communication ICMP entre VM VirtualBox |
-| `04-test-ping-windows-pe.webp` | Configuration IP et ping depuis Windows PE |
-| `05-test-ping-lubuntu-serveur.webp` | Configuration IP et ping depuis Lubuntu |
-
-**État actuel :** les fichiers image ne sont pas encore ajoutés à ce dossier. Les ajouter sans les retoucher sur le fond, en vérifiant l'absence d'informations sensibles ou de restrictions de publication.
-
-Les légendes et les nuances d'interprétation figurent dans [observations-visuelles.md](../observations-visuelles.md). Les exemples ICMP ne constituent pas des mesures de performance globale.
+Les captures attestent les états et échanges visibles, mais ne prouvent pas à elles seules le nombre total de postes ni des performances chronométrées.
+Le menu photographié utilise Lubuntu, tandis que le menu textuel actuellement publié dans `menu.ipxe` contient l'intitulé Ubuntu Live. Il peut donc s'agir de versions différentes.
