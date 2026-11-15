@@ -1,0 +1,26 @@
+# Local boot images, binaries, installers, and generated VM files
+casper/
+debian/
+windows/
+files/
+*.iso
+*.wim
+*.img
+*.efi
+*.exe
+*.zip
+*.vbox
+*.vbox-prev
+*.nvram
+
+# Local documents and personal data
+imprimer ali/
+write/
+rapport ter ali karoui.pdf
+New Text Document.txt
+
+# Local logs and operating-system metadata
+TER/
+*.log
+Thumbs.db
+Desktop.ini
