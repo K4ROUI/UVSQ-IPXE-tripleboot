@@ -2,7 +2,7 @@
 
 ## Résultats de l'expérimentation universitaire
 
-Ces résultats sont **rapportés par l'équipe ayant réalisé les essais** ; le dépôt ne contient pas encore de captures d'écran, journaux de séances ou mesures chronométrées permettant de les corroborer indépendamment.
+Les résultats ci-dessous sont **rapportés par l'équipe ayant réalisé les essais**. Des captures authentiques du menu, des bureaux démarrés et de commandes réseau ont été transmises ; elles sont décrites dans [les observations visuelles](observations-visuelles.md), mais les fichiers image ne sont pas encore publiés dans ce dépôt. Elles corroborent certains états et échanges visibles, **sans vérifier indépendamment le total de plus de 20 postes**, ni fournir des mesures chronométrées.
 
 | Essai | Résultat rapporté |
 | --- | --- |
@@ -14,7 +14,7 @@ Ces résultats sont **rapportés par l'équipe ayant réalisé les essais** ; le
 | Windows PE | Session utilisable |
 | Exécution d'applications pendant les sessions | Réussie |
 
-Ces observations soutiennent un **démarrage réseau sans disque local**, pas une installation persistante ni un benchmark. Le qualificatif « rapide » est une impression des utilisateurs, **pas un résultat mesuré**. Le nombre de démarrages exactement simultanés n'est pas connu.
+Ces observations soutiennent un **démarrage réseau sans disque local**, pas une installation persistante ni un benchmark. Les démarrages ont été jugés rapides et stables, sans bug bloquant observé pendant les essais rapportés. **Aucun chronométrage ni comparaison à une moyenne n'est disponible**. Le nombre de démarrages exactement simultanés n'est pas connu.
 
 Le responsable de formation IRS a évoqué l'idée d'une future utilisation dans les laboratoires ; **aucune adoption institutionnelle n'est présentée comme déjà réalisée**.
 
